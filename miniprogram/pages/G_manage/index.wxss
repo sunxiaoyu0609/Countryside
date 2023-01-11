@@ -1,0 +1,70 @@
+.buju{
+  height: 505px;
+}
+.search{
+  display: flex;
+  background-color: white;
+}
+.seaedit{
+  flex: 9;
+}
+.seabtn{
+  height: 30rpx;
+  margin-top: 1rpx;
+  margin-left: 5rpx;
+  flex: 2;
+
+}
+
+.block{
+  margin-top: 10rpx !important;
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  background-color: white;
+  padding: 5rpx 10rpx 5rpx 20rpx;
+  border-radius: 30rpx;
+}
+.itemimg{
+  flex: 2;
+  height: 170rpx;
+
+}
+.text{
+  margin-top: 10rpx;
+  margin-left: 20px;
+  flex: 5;
+}
+.IName{
+  font-size: 40rpx;
+  width: fit-content;
+}
+.sort{
+  font-size: small;
+  color: #cccccc;
+  width: fit-content;
+}
+.holder{
+  display: flex;
+  font-size: 30rpx;
+  width: fit-content;
+}
+
+.points{
+  font-size: 25rpx;
+  display: flex;
+}
+
+
+.heimingdan{
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+}
+.heimingdan image{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

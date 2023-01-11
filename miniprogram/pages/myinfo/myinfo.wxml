@@ -1,0 +1,45 @@
+<van-cell-group>
+  <van-field
+    label="名字"
+    value="{{Volunteer.VName}}"
+    border="{{ false }}"
+    bind:change="onChange"
+    right-icon="like"
+    disabled
+  />
+  <van-field
+    required  
+    label="联系方式"
+    clearable
+    value="{{Volunteer.VTelephone}}"
+    border="{{ false }}"
+    bind:change="getVTelephone"
+    right-icon="phone"
+    placeholder="请输入手机号"
+    error-message="{{VTelephoneerror}}"
+  />
+  <van-field
+    required
+    label="联系地址"
+    clearable
+    value="{{Volunteer.Vaddress}}"
+    border="{{ false }}"
+    bind:change="getVaddress"
+    right-icon="location"
+    placeholder="省/市/区(县)/街道/号"
+  />
+  <van-field
+      value="{{ Volunteer.VIntroduce }}"
+      label="自我简介"
+      type="textarea"
+      clearable
+      placeholder="做个简单的自我介绍吧！"
+      autosize
+      border="{{ false }}"
+      bindinput="getVIntroduce"
+      right-icon="smile"    
+  />
+</van-cell-group>
+<van-button color="linear-gradient(to right,#329D9c ,#205072 )" size="large"         bind:click="submit"   class="bottom">
+   重新提交信息
+</van-button>

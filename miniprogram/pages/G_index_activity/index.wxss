@@ -1,0 +1,50 @@
+.search{
+  display: flex;
+  background-color: white;
+}
+.seaedit{
+  flex: 9;
+}
+.seabtn{
+  height: 35rpx;
+  margin-top: 5rpx;
+  margin-left: 5rpx;
+  flex: 2;
+
+}
+.verify{
+  background-color: white;
+  display: flex;
+  height: 160rpx;
+  /* width: 90%; */
+  border: 1rpx solid white;
+  /* border-radius: 50rpx; */
+  margin: 5rpx auto;
+}
+.itemimg{
+  flex: 4;
+  height: 130rpx;
+  margin-top: 12rpx;
+}
+.itemimg .img{
+  width: 75%;
+  height: 100%;
+  margin-left: 20rpx;
+}
+.text{
+  flex: 6;
+  margin: 17rpx 0 0rpx 20rpx;
+}
+.title{
+  font-size: 40rpx;
+}
+.host{
+  font-size: 25rpx;
+  color: #625868;
+}
+.tagActivy{
+  flex:2;
+}
+.hide{
+  display: none;
+}

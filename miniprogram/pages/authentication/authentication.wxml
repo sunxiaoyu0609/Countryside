@@ -1,0 +1,65 @@
+<van-cell-group>
+  <van-field
+    required
+    clearable
+    right-icon="like"
+    label="真实姓名"
+    placeholder="请输入真实姓名"
+    bind:click-icon="onClickIcon"
+    bind:change="getVName"
+    error-message="{{VNameerror}}"
+  />
+  <van-field
+    type="idcard"
+    label="证件号"
+    placeholder="请输入证件号码"
+    required
+    right-icon="card"
+    border="{{ false }}"
+    bind:change="getv_idcard"
+    error-message="{{v_idcarderror}}"
+  />
+  <van-field
+    label="联系方式"
+    placeholder="请输入手机号码"
+    right-icon="phone"
+    required
+    border="{{ false }}"
+    bindinput="getVTelephone"
+    error-message="{{VTelephoneerror}}"
+  />
+  <van-field
+    label="联系地址"
+    placeholder="省/市/区(县)/街道/号"
+    right-icon="location"
+    required
+    border="{{ false }}"
+    bindinput="getVaddress"
+  />
+  <van-field
+      right-icon="smile"    
+      value="{{ message }}"
+      label="自我简介"
+      type="textarea"
+      placeholder="做个简单的自我介绍吧！"
+      autosize
+      border="{{ false }}"
+      bindinput="getVIntroduce"
+  />
+  <van-field
+    required
+    value="请上传相关身份证明"
+    label=""
+    left-icon="contact"
+    disabled
+    border="{{ false }}"
+    error-message="{{v_imageerror}}"
+  />
+
+  <van-image width="100" height="100" src="{{images}}" />
+  <van-button type="default" bind:click="upImg" color="#0E9489">上传</van-button>
+  <van-button color="linear-gradient(to right,#329D9c ,#205072 )" size="large"         bind:click="submit"   class="bottom">
+    申请成为志愿者
+  </van-button>
+</van-cell-group>
+

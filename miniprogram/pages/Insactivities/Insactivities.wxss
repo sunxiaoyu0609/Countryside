@@ -1,0 +1,7 @@
+.group{
+  padding-bottom: 200px;
+}
+
+.bottom{
+    width: 100%;
+}

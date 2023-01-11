@@ -1,0 +1,50 @@
+/* miniprogram/pages/G_message/index.wxss */
+
+/* 申请结构 */
+.reqtitle view{
+  font-size: medium;
+}
+.buju{
+  height: 300px;
+}
+.verify{
+  background-color: white;
+  display: flex;
+  height: 160rpx;
+  width: 90%;
+  border: 1rpx solid white;
+  border-radius: 50rpx;
+  margin: 5rpx auto;
+}
+.itemimg{
+  flex: 2;
+  width: 90%;
+  height: 130rpx;
+  margin: 13rpx 13rpx 13rpx 20rpx;
+}
+.text{
+  flex: 3;
+  margin: 17rpx 0 13rpx 20rpx;
+}
+.title{
+  font-size: 40rpx;
+}
+.host{
+  font-size: 25rpx;
+  color: #625868;
+}
+.btn{
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+.subbtn{
+  padding: 10rpx;
+  margin-left: 20rpx;
+}
+.findmore view{
+  width: 90%;
+  color: rgb(228, 72, 61);
+  margin: 0 auto;
+  border-radius: 50rpx;
+}

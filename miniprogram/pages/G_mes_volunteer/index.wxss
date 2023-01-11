@@ -1,0 +1,23 @@
+/* pages/G_man_volunteer/index.wxss */
+.head{
+  display: flex;
+}
+.headimgpos{
+  flex: 1;
+  display: flex;
+}
+.headimgpos image{
+  width: 70%;
+  height: 150px;
+  margin: 0 auto;
+}
+.headcontent{
+  flex: 3;
+}
+/* 审批意见 */
+.result{
+  display: flex;
+}
+.result_1,.result_2{
+  flex: 1;
+}

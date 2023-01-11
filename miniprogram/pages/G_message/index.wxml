@@ -1,0 +1,105 @@
+<!-- 消息头部 -->
+<van-cell-group title="未处理的请求({{all}})" >
+<view> 
+  <van-cell title="机构认证" value="{{identify}}"/>
+  <van-cell title="志愿者申请" value="{{volunteer}}"/>
+  <van-cell title="活动请求" value="{{activity}}"/>
+  <van-cell title="随手拍" value="{{sui}}"/>
+</view>
+</van-cell-group>
+
+<van-tabs type="card" color="#0E9489" width="100%">
+
+  <van-tab title="机构认证">
+    <view class="buju">
+      <view wx:for="{{identifyrequest}}" class="verify">
+        <image src="{{item.IImage==null?'../images/meiyoutu.png':item.IImage}}" class="itemimg"  bindtap="goIdenDetail" data-identity-id="{{item.Iaccount}}"/>
+        <view class="text"  bindtap="goIdenDetail" data-identity-id="{{item.Iaccount}}">
+          <view class="title">{{item.IName}}</view>
+          <view class="host">{{item.IClassification}}</view>
+        </view>
+        <view class="btn">
+          <van-button round type="primary" size="small" class="subbtn"
+            data-id="{{item._id}}" data-view="1" bind:click="submitI">同意</van-button>
+          <van-button round type="danger" size="small" class="subbtn"
+            data-id="{{item._id}}" data-view="2" bind:click="submitI">驳回</van-button>
+        </view>
+      </view>
+    </view>
+  </van-tab>
+
+  <van-tab title="志愿者申请">
+    <view class="buju">
+      <view wx:for="{{volrequst}}" class="verify">
+          <image src="{{item.v_image==null?'../images/meiyoutu.png':item.v_image}}" class="itemimg"
+          bindtap="goVolDetail" data-id="{{item._id}}"/>
+          <view class="text"  bindtap="goVolDetail" data-id="{{item._id}}">
+            <view class="title">{{item.VName}}</view>
+              <!-- <view class="host">{{item.IClassification}}</view> -->
+          </view>
+          <view class="btn">
+            <van-button round type="primary" size="small" class="subbtn"
+                data-id="{{item._id}}" data-view="2" bind:click="submitV">同意</van-button>
+            <van-button round type="danger" size="small" class="subbtn"
+                data-id="{{item._id}}" data-view="0" bind:click="submitV">驳回</van-button>
+          </view> 
+      </view>
+    </view>
+  </van-tab>
+
+  <van-tab title="活动请求" bind:change="getActivityReq">
+    <view class="buju">
+      <view wx:for="{{activityrequest}}" class="verify" > 
+        <image src="{{item.Aimage==null?'../images/meiyoutu.png':item.Aimage}}" class="itemimg"
+        bindtap="goActDetail" data-activity-id="{{item._id}}"/>
+        <view class="text"  bindtap="goActDetail" data-activity-id="{{item._id}}">
+          <view class="title">{{item.Aname}}</view>
+          <view class="host">{{item.IId}}</view>
+        </view>
+        <view class="btn">
+          <van-button round type="primary" size="small" class="subbtn"
+            data-id="{{item._id}}" data-view="1" bind:click="submitA">同意</van-button>
+          <van-button round type="danger" size="small" class="subbtn"
+            data-id="{{item._id}}" data-view="2" bind:click="submitA">驳回</van-button>
+        </view>
+      </view>
+    </view>
+  </van-tab>
+
+
+  <van-tab title="随手拍">
+    <view class="buju">
+      <view wx:for="{{suishoupai}}" class="verify"> 
+        <image src="{{item.picture==null?'../images/meiyoutu.png':item.picture}}" class="itemimg"></image>
+        <view class="text">
+          <view class="title">{{item.problem}}</view>
+          <van-tag type="success" style="display: {{item.feedback==null?'none':'block'}};">已回复</van-tag>
+        </view>
+        <view class="btn">
+          <van-button round type="primary" size="small" class="subbtn" 
+            bind:click="openFeedback" data-fid="{{item._id}}">回复</van-button>
+        </view>
+      </view>
+      <van-dialog
+        use-slot
+        title="反馈"
+        show="{{ show }}"
+        show-cancel-button
+        bind:close="onClose"
+        bind:confirm="submitS"
+        data-id="{{item._id}}"
+        >
+        <van-field
+        model:value="{{ feedback }}"
+        placeholder="请输入"
+        border="{{ false }}"
+        bind:blur="getFeedback"
+      />
+      </van-dialog>
+    </view>
+  </van-tab>
+
+</van-tabs>
+
+<!-- 底部tab -->
+<tabbottom  activeindex="2"></tabbottom>

@@ -1,0 +1,15 @@
+<van-search
+  placeholder="请输入要查找的活动"
+  bind:search="onSearch"
+  background="#0E9489"
+/>
+<view wx:for="{{activities}}">
+  <view class="activity" data-id="{{item._id}}" bindtap="beforeselectactivity">
+    <view wx:if="{{item.Aend==0}}" class="record_status1">未开始</view>
+    <view wx:if="{{item.Aend==1}}"   class="record_status2">进行中</view>
+    <view wx:if="{{item.Aend==2}}" class="record_status3">已结束</view>
+    <image mode="widthFix" class="activity_image "src="{{item.Aimage}}" />
+    <view class="activity_name"> <van-icon name="smile-o" color="white"/>{{item.Aname}}</view>
+  </view>
+</view>
+<van-empty description="空空如也" style="display: {{isdiplay}};"/>

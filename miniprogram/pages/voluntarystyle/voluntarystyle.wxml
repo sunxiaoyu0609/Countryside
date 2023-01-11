@@ -1,0 +1,11 @@
+<view wx:for="{{Link}}">
+  <van-card
+    desc="{{item.LIntroduce}}文章链接：{{item.Link}}"
+    title="{{item.LTitle}}"
+    thumb="{{item.LImage}}"
+  />
+</view>
+
+
+
+

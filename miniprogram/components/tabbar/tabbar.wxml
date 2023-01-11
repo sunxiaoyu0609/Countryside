@@ -1,0 +1,7 @@
+<van-tabbar  bind:change="onChange" active="{{ active }}" active-color="#0E9489" class="tabbar">
+  <van-tabbar-item icon="underway-o" name="0">活动申请</van-tabbar-item>
+  <van-tabbar-item icon="search" name="1">活动信息</van-tabbar-item>
+  <van-tabbar-item icon="question-o" name="2">志愿者提问</van-tabbar-item>
+  <van-tabbar-item icon="smile-o" name="3">志愿者风采</van-tabbar-item>
+  <van-tabbar-item icon="friends-o" name="4">团队信息</van-tabbar-item>
+</van-tabbar>

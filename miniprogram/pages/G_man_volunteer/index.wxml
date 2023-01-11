@@ -1,0 +1,40 @@
+<view>
+  <view class="head">
+    <view class="headimgpos">
+     <image src="{{volunteer.v_image==null?'../images/meiyoutu.png':volunteer.v_image}}"/>
+    </view>
+  </view> 
+  <view class="mes_toV" bind:tap="onOpen">
+    <image src="../images/mes_toV.png"/>
+  </view>
+  <van-cell-group>
+    <van-cell title="姓名" value="{{volunteer.VName}}" />
+    <van-cell title="微信名" value="{{volunteer.wxname}}" />
+    <van-cell title="积分" value="{{volunteer.VIntegral}}" />
+    <van-cell title="志愿者所受评价平均值" value="{{volunteer.Vevaluate}}" />
+    <van-cell title="身份证" value="{{volunteer.v_idcard}}" />
+    <van-cell title="联系方式" value="{{volunteer.VTelephone}}" />
+    <van-cell title="住址" value="{{volunteer.Vaddress}}" />
+    <van-cell title="简介" value="{{volunteer.VIntroduce}}" />
+    <van-cell title="账号状态" value="{{volunteer.VStatus==2?'正常':'已封锁'}}" />
+  </van-cell-group>
+  <van-button type="danger" block bind:click="lock"
+      style="display: {{volunteer.VStatus==2?'block':'none'}};">封锁账号</van-button>
+  <van-button type="danger" block bind:click="cancel"
+      style="display: {{volunteer.VStatus==0?'block':'none'}};">取消封锁</van-button>
+  <van-dialog id="van-dialog" />
+  <van-dialog
+      use-slot
+      title="消息"
+      show="{{ show }}"
+      show-cancel-button
+      bind:close="onClose"
+      bind:confirm="sendMessge">
+
+      <van-field
+      model:value="{{ message }}"
+      placeholder="请输入"
+      border="{{ false }}"/>
+
+    </van-dialog>
+</view>

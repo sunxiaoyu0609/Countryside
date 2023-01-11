@@ -1,0 +1,14 @@
+<view class="applicants" wx:for="{{Volunteers}}">
+  <van-card
+    title="{{item.VName}}"
+    thumb="{{item.avatarUrl}}"
+    desc="{{item.VIntroduce}}"
+  >
+    <view slot="footer">
+      <van-button type="danger" size="mini" bind:click="delete" data-id="{{item.openId}}" data-A_id="{{A_id}}">退出队伍</van-button>
+    </view>
+    <view slot="tags">
+      <van-tag type="primary">{{item.VTelephone}}</van-tag>
+    </view>
+  </van-card>
+</view>

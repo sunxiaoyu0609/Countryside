@@ -1,0 +1,19 @@
+<view class="main">
+<view class="login">
+	<view class="kuang shadow">
+			<view class="hint">用户登录</view>
+      <view>
+        <image
+          class="image"
+          src="../images/logo.png"
+        />
+      </view>
+      
+      <button class="btn" bindtap="loadByWechat">登录</button>
+      <navigator class="loginbyin" url="../Inslogin/Inslogin">志愿者团体登录</navigator>
+      <navigator class="loginbyin" url="../G_login/index">政府管理员登录</navigator>
+	</view>
+</view>
+<view class="bottom">	 
+</view>
+</view>

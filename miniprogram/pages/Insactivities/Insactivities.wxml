@@ -1,0 +1,110 @@
+<van-tabs active="{{ active }}" bind:change="onChange" color="#0E9489">
+  <van-tab title="申报活动">
+      <van-cell-group class="group">
+        <van-field
+          required
+          clearable
+          label="活动名字"
+          placeholder="请输入活动名"
+          bind:change="ChangeAname"
+        />
+        <van-field
+        clearable
+          label="活动开始时间"
+          placeholder="输入格式：年,月,日"
+          required
+          bind:change="ChangeAStartTime"
+        />
+        <van-field
+          required
+          clearable
+          label="活动结束时间"
+          placeholder="输入格式：年,月,日"
+          bind:change="ChangeAEndTime"
+          error-message="{{AEndTimeerrer}}"
+        />
+        <van-field
+          required
+          clearable
+          label="举办地"
+          placeholder="举办地"
+          bind:change="ChangeAPlace"
+        />
+        <van-field
+          required
+          clearable
+          label="集合时间"
+          placeholder="集合时间"
+          bind:change="ChangeAtime"
+        />
+        <van-field
+          required
+          clearable
+          label="集合地点"
+          placeholder="集合地点"
+          bind:change="ChangeAarea"
+        />
+        <van-field
+          required
+          clearable
+          label="活动说明"
+          placeholder="活动说明"
+          bind:change="ChangeAexplain"
+        />
+        <van-field
+          required
+          clearable
+          label="征集人数"
+          placeholder="征集人数"
+          bind:change="ChangeAnumber"
+        />
+        <van-field
+            required
+            value="请上传活动照片"
+            label=""
+            left-icon="contact"
+            disabled
+            border="{{ false }}"
+            error-message="{{v_imageerror}}"
+        />
+        <van-image width="100" height="100" src="{{images}}" />
+        <van-button type="default" bind:click="upImg" color="#0E9489">上传</van-button>
+        <van-button color="linear-gradient(to right,#329D9c ,#205072 )" size="large"  bind:click="submit" class="bottom">
+         提交
+        </van-button>
+      </van-cell-group>
+  </van-tab>
+
+  <van-tab title="活动审核状态">
+    <view class="activities" wx:for="{{Activities}}">
+      <van-card wx:if="{{item.AStatus==0}}"
+        desc="正在申请中"
+        title="{{item.Aname}}"
+        thumb="{{item.Aimage}}"
+      >
+      <view slot="tags">
+        <van-tag type="primary">正在申请中</van-tag>
+      </view>
+    </van-card>
+      <van-card wx:if="{{item.AStatus==1}}"
+        desc="恭喜您,活动通过啦,快快准备吧!"
+        title="{{item.Aname}}"
+        thumb="{{item.Aimage}}"
+      >
+      <view slot="tags">
+        <van-tag type="success">通过</van-tag>
+      </view>
+    </van-card>
+      <van-card wx:if="{{item.AStatus==2}}"
+        desc="驳回理由:{{item.AReason}}"
+        title="{{item.Aname}}"
+        thumb="{{item.Aimage}}"
+      >
+      <view slot="tags">
+        <van-tag type="danger">驳回</van-tag>
+      </view>
+    </van-card>
+    </view>
+  </van-tab>
+</van-tabs>
+<tabbar active="{{0}}"></tabbar>

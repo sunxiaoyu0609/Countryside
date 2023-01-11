@@ -1,0 +1,18 @@
+<view class="contentDtail">
+  <image src="{{institution.IImage==null?'../images/meiyoutu.png':institution.IImage}}" class="img"></image>
+  <van-cell-group>
+    <van-cell title="账号" value="{{institution.Iaccount}}" />
+    <van-cell title="机构名" value="{{institution.IName}}" />
+    <van-cell title="机构类别" value="{{institution.IClassification}}" />
+    <van-cell title="持有者" value="{{institution.Iholder}}" />
+    <van-cell title="联系方式" value="{{institution.Itel}}" />
+    <van-cell title="机构简介" value="{{institution.IItroduce}}" />
+    <van-cell title="状态" value="{{institution.IStatus==1?'已认证':'无认证'}}" />
+  
+  </van-cell-group> 
+  <van-button type="danger" block bind:click="lock" 
+    style="display: {{institution.IStatus==1?'block':'none'}};">取消认证</van-button>
+  <van-button type="danger" block bind:click="recover" 
+    style="display: {{institution.IStatus==2?'block':'none'}};">恢复认证</van-button>
+  <van-dialog id="van-dialog" />
+</view>

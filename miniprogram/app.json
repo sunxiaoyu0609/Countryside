@@ -1,0 +1,94 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/shopping/shopping",
+    "pages/me/me",
+    "pages/authentication/authentication",
+    "pages/RankingList/RankingList",
+    "pages/team/team",
+    "pages/vactivity/vactivity",
+    "pages/vactivitydetails/vactivitydetails",
+    "pages/myinfo/myinfo",
+    "pages/voluntarystyle/voluntarystyle" ,
+    "pages/news/news",
+    "pages/handclap/handclap",
+    "pages/share/share",
+    "pages/share_upload/share_upload",
+    "pages/record/record",
+    "pages/myshare/myshare",
+    "pages/question/question",
+    "pages/Inslogin/Inslogin",
+    "pages/Insactivities/Insactivities",
+    "pages/Insregister/Insregister",
+    "pages/Insactivitiesinfo/Insactivitiesinfo",
+    "pages/Insquestion/Insquestion",
+    "pages/Inslookapplicants/Inslookapplicants",
+    "pages/InsHairintegral/InsHairintegral",
+    "pages/Insinfo/Insinfo",
+    "pages/Insstyle/Insstyle",
+    "pages/message/message",   
+    "pages/G_index/index",
+    "pages/G_manage/index",
+    "pages/G_mine/index",
+    "pages/G_message/index",
+    "pages/G_index_activity/index",
+    "pages/G_index_shop/index",
+    "pages/G_index_announcement/index",
+    "pages/G_index_crousel/index",
+    "pages/G_mes_identify/index",
+    "pages/G_mes_activity/index",
+    "pages/G_man_institution/index",
+    "pages/G_man_volunteer/index",
+    "pages/G_index_act_detail/index",
+    "pages/G_goods/index",
+    "pages/G_login/index",
+    "pages/G_mes_volunteer/index",
+    "pages/G_man_heimingdan/index"
+  ],
+  "window": {
+    "backgroundColor": "#0E9489",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0E9489",
+    "navigationBarTitleText": "乡益",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#0E9489",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/images/首页.png",
+        "selectedIconPath": "pages/images/首页_active.png"
+      },
+      {
+        "pagePath": "pages/shopping/shopping",
+        "text": "积分商城",
+        "iconPath": "pages/images/积分商城.png",
+        "selectedIconPath": "pages/images/积分商城 _active.png"
+      },
+      {
+        "pagePath": "pages/vactivity/vactivity",
+        "text": "志愿活动",
+        "iconPath": "pages/images/活动.png",
+        "selectedIconPath": "pages/images/活动_active.png"
+      },
+      {
+        "pagePath": "pages/record/record",
+        "text": "志愿记录",
+        "iconPath": "pages/images/记录.png",
+        "selectedIconPath": "pages/images/记录 _active.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "个人中心",
+        "iconPath": "pages/images/个人中心.png",
+        "selectedIconPath": "pages/images/个人中心_active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabbottom": "components/tabbottom/tabbottom"
+}

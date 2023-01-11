@@ -1,0 +1,17 @@
+.identity{
+  display: flex;
+  flex-direction: column;
+}
+.img{
+  width: 70%;
+  height: 150px;
+  margin: 0 auto;
+}
+
+/* 审批意见 */
+.result{
+  display: flex;
+}
+.result_1,.result_2{
+  flex: 1;
+}

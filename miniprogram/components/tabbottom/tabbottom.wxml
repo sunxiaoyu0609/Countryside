@@ -1,0 +1,15 @@
+<!-- 底部tab -->
+<van-tabbar active="{{ activeindex }}" bind:change="onChange" active-color="#0E9489">
+  <van-tabbar-item name="1" icon="home-o">
+    <view>首页</view>
+  </van-tabbar-item>
+  <van-tabbar-item name="2" icon="chat-o">
+    <view>消息</view>
+  </van-tabbar-item>
+  <van-tabbar-item name="3" icon="friends-o">
+    <view >成员管理</view>
+  </van-tabbar-item>
+  <van-tabbar-item name="4" icon="user-o">
+    <view>个人中心</view>
+  </van-tabbar-item>
+</van-tabbar>

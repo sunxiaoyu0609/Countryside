@@ -1,0 +1,11 @@
+/* pages/G_index_act_detail/index.wxss */
+
+.all{
+  display: flex;
+  flex-direction: column;
+}
+.Aimage{
+  width: 70%;
+  height: 150px;
+  margin: 0 auto;
+}

@@ -1,0 +1,19 @@
+
+.images{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.griditem{
+  height: 40px;
+}
+
+.imageitem{
+  width:87px;
+   height:87px;
+}
+
+.imgbtn{
+  margin: 0 auto;
+}

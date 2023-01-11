@@ -1,0 +1,53 @@
+.buju{
+  height: 505px;
+}
+.search{
+  display: flex;
+  background-color: white;
+}
+.seaedit{
+  width: 100%;
+}
+
+.block{
+  margin-top: 10rpx !important;
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  background-color: white;
+  padding: 5rpx 10rpx 5rpx 20rpx;
+  border-radius: 30rpx;
+}
+.itemimg{
+  flex: 2;
+  height: 170rpx;
+
+}
+.text{
+  margin-top: 10rpx;
+  margin-left: 20px;
+  flex: 5;
+}
+.IName{
+  font-size: 40rpx;
+  width: fit-content;
+}
+.sort{
+  font-size: small;
+  color: #cccccc;
+  width: fit-content;
+}
+.holder{
+  display: flex;
+  font-size: 30rpx;
+  width: fit-content;
+}
+
+.points{
+  font-size: 25rpx;
+  display: flex;
+}
+/* 按钮 */
+.btn{
+  margin-top: 50px;
+}

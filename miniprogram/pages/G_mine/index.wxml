@@ -1,0 +1,50 @@
+<view>
+		<view class="top">
+			<view class="center">
+				<view class="center_top">
+					<view class="manager">管理员  {{usernow.Name}}</view>
+				</view>
+			</view>
+    </view>
+    <view class="bottom" style="display: {{visirable==1?'flex':'none'}};">
+      <van-field
+        model:value="{{ pwd }}"
+        type="password"
+        label="新密码"
+        placeholder="请输入密码"
+        required
+        border="{{ false }}"
+      /> 
+      <van-field
+        model:value="{{ repwd }}"
+        type="password"
+        label="确认密码"
+        placeholder="请输入密码"
+        bind:blur="isequal"
+        required
+        border="{{ false }}"
+      />
+      <view class="text" style="display: {{visirable1==0?'none':'block'}};">密码不一致</view>
+    </view>
+
+    <view class="btn">
+      <view class="changepwd">
+        <van-button block color="#0E9489" class="outlogin"  bind:click="changepwd"
+        style="display: {{visirable==0?'block':'none'}};">
+          修改密码
+        </van-button>
+        <van-button block color="#0E9489" class="outlogin"  bind:click="submit"
+        style="display: {{visirable==1?'block':'none'}};">
+          确认修改
+        </van-button>
+      </view>
+      <view class="outlogin">
+        <van-button block color="#0E9489" class="outlogin"  bind:click="exit">
+          退出登录
+        </van-button>
+      </view>
+    </view>
+</view>
+
+<!-- 底部tab -->
+<tabbottom  activeindex="4"></tabbottom>

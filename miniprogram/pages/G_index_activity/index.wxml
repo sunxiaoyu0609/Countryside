@@ -1,0 +1,30 @@
+<view>
+  <view class="search">
+    <van-search
+        input-align="center"
+        placeholder="请输入搜索关键词"
+        custom-class="seaedit"
+        class="seaedit"
+        bind:change="search"
+      />
+      <!-- <van-button round type="primary" custom-class="seabtn" class="seabtn" bind:click="search">搜索</van-button> -->
+  </view>
+  
+  
+  <view wx:for="{{activity}}"> 
+    <navigator url="../G_index_act_detail/index?id={{item._id}}" class="verify" >
+      <view class="itemimg">
+        <image src="{{item.Aimage==null?'../images/meiyoutu.png':item.Aimage}}" class="img"/>
+      </view>
+      <view class="text">
+        <view class="title">{{item.Aname}}</view>
+        <view class="host">{{item.IId}}</view>
+      </view>
+      <view class="tagActivy">
+        <van-tag type="success" class="{{item.Aend==2?'':'hide'}}">已结束</van-tag>
+        <van-tag type="danger" class="{{item.Aend==1?'':'hide'}}">进行中</van-tag>
+        <van-tag type="primary" class="{{item.Aend==0?'':'hide'}}">未开始</van-tag>
+      </view>
+    </navigator>
+  </view>
+</view>

@@ -1,0 +1,112 @@
+.vactivitydetails{
+  width: 80%;
+  height: auto;
+  background: white;
+  box-shadow: 0 0 5px 4px #83838330;
+  margin: 0 auto;
+  margin-top: -30px;
+  z-index: 1;
+  border-radius: 10px;
+  padding: 15px 15px;
+}
+.Aname{
+  color: #0E9489;
+  font-weight: bolder;
+  font-size: 15px;
+}
+.zong{
+  display: flex;
+  flex: row;
+  margin-top: 15px;
+}
+.zong1{
+  flex: 2;
+  font-size: 10px;
+}
+.zong2{
+  flex:5;
+  font-size: 10px;
+}
+
+.volunteers{
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 0 0 5px 4px #83838330;
+  border-radius: 10px;
+  margin-top: 20px;
+  background-color: white;
+}
+
+.volunteers_person{
+  width: 25%;
+  height: 80px;
+  text-align: center;
+  float: left;
+}
+.bottom{
+  margin: 0 auto;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+.comment{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  box-shadow: 0 0 5px 4px #83838330;
+  border-radius: 10px;
+  padding-bottom:100px ;
+}
+.question{
+  position: fixed;
+  bottom: 0px;
+  z-index: 1;
+  width: 100%;
+}
+.question_border{
+  background: gainsboro;
+}
+
+/* 答疑评论区 */
+.ddiscuss{
+  width: 100%;
+}
+.volunteer{
+  width: 100%;
+  height: auto;
+  border-bottom:1px solid gainsboro ;
+  display: flex;
+  padding: 8px 8px;
+}
+.text{
+  margin-left: 3px;
+}
+.vname{
+  font-size:13px;
+  color: rgb(99, 99, 99);
+}
+.content,.time{
+  margin-top: 5px;
+}
+.time{
+  font-size:10px;
+  color: rgb(194, 194, 194);
+}
+.content{
+  font-size: 14px;
+}
+.official{
+    margin-top: 5px;
+    font-size: 30rpx;
+    font-weight: bold;
+    background: linear-gradient(to top,#76d6d5 ,#205072 );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.reply{
+  display: flex;
+  margin-top: 5px;
+}
+.reply_text{
+  margin-left: 3px;
+}

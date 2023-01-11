@@ -1,0 +1,54 @@
+/* 轮播图 */
+.swiperContainer{
+  margin-top: 15rpx;
+  bottom: 8rpx;
+  position: relative;
+  }
+  .imageContainer{
+    width: 100%;
+    margin-top: 10rpx;
+    height: 350rpx;
+  }
+  .turnItem{
+    height: 340rpx;
+  }
+  .itemImg{
+    position: absolute;
+    width: 99%;
+    height: 300rpx;
+    margin-top: 20rpx;
+    border-radius: 15rpx;
+  }
+  .imgActive{
+    opacity: 1;
+    height: 340rpx;
+    margin-top: 0rpx;
+    transition:all .2s ease-in 0s;
+  }
+  /* 指示点修饰 */
+  .dots{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 25rpx;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .dot{
+    margin: 0 8rpx;
+    width: 18rpx;
+    height: 18rpx;
+    background-color: white;
+    border-radius: 8rpx;
+    transition: all .5s;
+  }
+  .dot.active{
+    width: 24rpx;
+    background: #0E9489;
+  }
+/* 管理板块 */
+.manageblock{
+   color:#BEE0D0;
+}
+  

@@ -1,0 +1,10 @@
+<view wx:for="{{message}}" >
+  <van-panel title="您有一条新的消息！" desc="{{item.vmessage}}">
+  <view slot="footer" class="footer">
+    <van-button size="small" type="danger" class="button" bind:click="delete" data-id="{{item._id}}">删除</van-button>
+  </view>
+</van-panel>
+</view>
+
+
+

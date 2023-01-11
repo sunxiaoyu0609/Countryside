@@ -1,0 +1,38 @@
+<view class="activity">
+  <image src="{{actReqDetail.Aimage==null?'../images/meiyoutu.png':actReqDetail.Aimage}}" class="img" />
+  <van-cell-group>
+    <van-cell title="活动名称" value="{{actReqDetail.Aname}}" />
+    <van-cell title="开始时间" value="{{actReqDetail.AStartTime}}" />
+    <van-cell title="结束时间" value="{{actReqDetail.AEndTime}}" />
+    <van-cell title="负责机构" value="{{actReqDetail.IId}}" />
+    <van-cell title="举办地点" value="{{actReqDetail.APlace}}" />
+    <van-cell title="集合时间" value="{{actReqDetail.Atime}}" />
+    <van-cell title="集合地点" value="{{actReqDetail.Aarea}}" />
+    <van-cell title="征集人数" value="{{actReqDetail.Anumber}}" />
+    <van-cell title="活动说明" value="{{actReqDetail.Aexplain}}" />
+    <van-radio-group value="{{ radio }}" bind:change="onChange">
+      <van-cell-group title="审批意见">
+        <view class="result">
+          <van-cell class="result_1" title="同意" clickable data-name="1" bind:click="onClick">
+            <van-radio slot="right-icon" name="1" />
+          </van-cell>
+          <van-cell class="result_2" title="驳回" clickable data-name="2" bind:click="onClick">
+            <van-radio slot="right-icon" name="2" />
+          </van-cell>
+        </view>
+      </van-cell-group>
+    </van-radio-group>
+    <van-field
+      value="{{ reason }}"
+      label="驳回理由"
+      type="textarea"
+      placeholder="请输入"
+      autosize
+      border="{{ false }}"
+      class="{{radio==1?'hide':''}}"
+      bind:blur="getReason"/>
+    <van-button type="primary" block data-id="{{actReqDetail._id}}" bind:click="submit">提交</van-button>
+  </van-cell-group> 
+    
+
+</view>

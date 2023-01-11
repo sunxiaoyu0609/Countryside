@@ -1,0 +1,51 @@
+<view>
+		<view class="top">
+			<view class="center">
+				<view class="center_top">
+					<view class="center_img">
+							<image  src="{{avatarUrl}}"></image>
+					</view>
+					<view class="center_info">
+            <text class="clickload" >{{nickName}}</text>
+					</view>
+				</view>
+				<view class="center_down">
+					<view class="center_rank">
+						<view class="rank_score">{{Vevaluate}}</view>
+						<view class="rank_text">我的评分</view>
+					</view>
+					<view class="center_score">
+						<view class="rank_score">{{VIntegral}}</view>
+						<view class="rank_text">我的积分</view>
+					</view>
+				</view>
+			</view>
+			<image src='http://docfile.funkingka.cn/FqzmiFqvXbHg-cfbquNRlawHUgHt' mode='scaleToFill' class='gif-wave'></image>
+    </view>
+    <view class="bottom">
+    	<view class="b_panel"  bindtap="quanxian0">
+				<van-icon name="chat" color="#0E9489"/>
+				我的消息			
+			</view>	
+      <view class="b_panel"  bindtap="quanxian1"><van-icon name="fire" color="#0E9489"/> 排行榜</view>
+			<view class="b_panel"   url="" bindtap="navigator">
+				<van-icon name="like" color="#0E9489"/>
+				 申请成为志愿者	
+			</view>
+			<view class="b_panel" bindtap="quanxian2"><van-icon name="photograph" color="#0E9489" /> 问题反馈</view> 
+			<view class="b_panel" bindtap="quanxian3"><van-icon name="award" color="#0E9489" /> 我的文明秀</view>     
+			<view class="b_panel" bindtap="quanxian4"><van-icon name="manager" color="#0E9489" /> 我的信息</view>
+			<view class="b_panel"  bindtap="quanxian5">
+				<van-icon name="youzan-shield" color="#0E9489"/>
+				技术支持			
+			</view>	
+			<van-share-sheet
+						show="{{ showShare }}"
+						title="联系邮箱：1312788652@qq.com"
+						options="{{ options }}"
+						bind:select="onSelect"
+						bind:close="onClose"
+				/>  
+		  <view class="b_panel" bindtap="loginout"  ><van-icon name="fire" color="#0E9489"/>退出登录</view>	  		 
+  	</view>
+</view>

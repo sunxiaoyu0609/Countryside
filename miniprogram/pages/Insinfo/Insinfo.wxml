@@ -1,0 +1,19 @@
+<view>
+		<view class="top">
+			<view class="center">
+				<view class="center_top">
+					<view class="center_img">
+							<image  src="{{Institution[0].IImage}}"></image>
+					</view>
+					<view class="center_info">
+            <text class="clickload" >{{Institution[0].IName}}</text>
+					</view>
+				</view>
+			</view>
+			<image src='http://docfile.funkingka.cn/FqzmiFqvXbHg-cfbquNRlawHUgHt' mode='scaleToFill' class='gif-wave'></image>
+    </view>
+    <view class="bottom">
+      <view class="b_panel" bindtap="loginout"><van-icon name="fire" color="#0E9489"/>退出登录</view>		 
+  	</view>
+</view>
+<tabbar active="{{4}}"></tabbar>

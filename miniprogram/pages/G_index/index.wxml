@@ -1,0 +1,31 @@
+<view class="swiperContainer">
+  <swiper class="imageContainer" bindchange="swiperChange" previous-margin="55rpx" next-margin="50rpx" circular autoplay mut-bind:tap="toModifyCrousel">
+    <block wx:for="{{RImage}}" wx:key="index">
+       <swiper-item class="turnItem">
+          <image class="itemImg {{index == swiperCurrent ? 'imgActive': ''}}" src="{{item.RImage}}"></image>
+        </swiper-item>
+    </block>
+  </swiper>
+   <!-- 指示点的修饰 -->
+  <view class="dots">
+     <block wx:for="{{RImage}}" wx:key="index">
+        <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+      </block>
+  </view>
+</view>
+
+<!-- 管理板块 -->
+<van-grid column-num="3" class="manageblock">
+  <navigator url="../G_index_activity/index">
+   <van-grid-item icon="comment-o" text="活动"/>
+  </navigator>
+  <navigator url="../G_index_shop/index">
+   <van-grid-item icon="shopping-cart-o" text="积分商城" />
+  </navigator>
+  <navigator url="../G_index_announcement/index">
+    <van-grid-item icon="label-o" text="公告" />
+  </navigator>
+</van-grid>
+
+<!-- 底部tab -->
+<tabbottom activeindex="1"></tabbottom>

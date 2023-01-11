@@ -1,0 +1,28 @@
+<view class="main">
+<view class="login">
+	<view class="kuang shadow">
+			<view class="hint">管理员登录</view>
+      <van-cell-group>
+        <van-field
+          model:value="{{ name }}"
+          label="用户名"
+          placeholder="请输入用户名"
+          border="{{ false }}"
+        />
+        <van-field
+          model:value="{{ password }}"
+          type="password"
+          label="密码"
+          placeholder="请输入密码"
+          required
+          border="{{ false }}"
+        />
+      </van-cell-group>
+      <button class="btn2" bindtap="login">登录</button>
+      <button class="btn" bindtap="login2">返回</button>
+	</view>
+</view>
+<van-toast id="van-toast" />
+<view class="bottom">	 
+</view>
+</view>

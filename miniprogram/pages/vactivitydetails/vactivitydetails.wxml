@@ -1,0 +1,113 @@
+<van-image width="100%" height="170" src="{{activities[0].Aimage}}"/>
+<!-- 活动详情 -->
+<view class="vactivitydetails">
+  <view class="Aname">{{activities[0].Aname}}</view>
+  <view class="zong">
+    <view class="zong1">活动地点：</view>
+    <view class="zong2">{{activities[0].APlace}}</view>
+  </view>
+  <view class="zong">
+    <view class="zong1">负责机构：</view>
+    <view class="zong2">{{activities[0].IName}}</view>
+  </view>
+  <view class="zong">
+    <view class="zong1">联系人：</view>
+    <view class="zong2">{{Institution[0].Iholder}}</view>
+  </view>
+  <view class="zong">
+    <view class="zong1">联系方式：</view>
+    <view class="zong2">{{Institution[0].Itel}}</view>
+  </view>
+  <view class="zong">
+    <view class="zong1">集合时间：</view>
+    <view class="zong2">{{activities[0].Atime}}</view>
+  </view>
+  <view class="zong">
+    <view class="zong1">集合地点：</view>
+    <view class="zong2">{{activities[0].Aarea}}</view>
+  </view>
+  <view class="zong">
+    <view class="zong1">征集人数：</view>
+    <view class="zong2">{{activities[0].Anumber}}</view>
+  </view>
+  <view class="zong">
+    <view class="zong1">活动时间：</view>
+    <view class="zong2">{{activities[0].AStartTime}}至{{activities[0].AEndTime}}</view>
+  </view>
+  <view class="zong">
+    <view class="zong1">活动说明：</view>
+    <view class="zong2">{{activities[0].Aexplain}}</view>
+  </view>
+</view>
+
+<!-- 报名按钮 -->
+<van-button color="linear-gradient(to right,#329D9c ,#205072 )" size="normal"  bind:click="submit"   class="bottom" round >
+    个人报名
+</van-button>
+
+<!-- 最新报名 -->
+<van-collapse accordion value="{{ activeName }}" bind:change="onChange" class="volunteers">
+  <van-collapse-item title="最新报名" name="1" icon="smile">
+    <view class="volunteers_person" wx:for="{{Volunteers}}">
+      <van-image round width="50px" height="50px" src="{{item.avatarUrl}}"  fit="cover"/>
+      <view>{{item.VName}}</view>
+    </view>
+  </van-collapse-item>
+</van-collapse>
+
+<!-- 评论 -->
+<van-tabs active="{{ active }}" bind:change="onChange" class="comment" color="#0E9489">
+  <van-tab title="答疑评论区">
+    <view class="discuss" wx:for="{{discuss}}">
+      <view class="volunteer" >
+        <van-image
+            round
+            width="30px"
+            height="30px"
+            src="{{item.avatarUrl}}"
+            class="image"
+            fit="cover"
+        />
+        <view class="text">
+          <view class="vname">{{item.VName}}</view>
+          <view class="content">{{item.problem}}</view>
+          <view class="time">{{item.rtime}}</view>
+          <!-- 官方的回复 -->
+          <view class="reply" wx:if="{{item.answer!=null}}">
+            <van-image
+              round
+              width="30px"
+              height="30px"
+              src="{{Institution[0].IImage}}"
+              class="image"
+              fit="cover"
+            />
+            <view class="reply_text">
+              <view class="official">{{Institution[0].IName}}</view>
+              <view class="reply_content">{{item.answer}}</view>
+            </view>
+          </view>    
+        </view>    
+      </view>
+    </view>
+  </van-tab>
+</van-tabs>
+
+<!-- 提问 -->
+<van-cell-group class="question">
+  <van-field custom-style="question_border"
+    center
+    clearable
+    left-icon="question-o"
+    placeholder="请输入问题"
+    use-button-slot
+    bind:change="problem"
+  >
+    <van-button bind:click="questionsubmit" slot="button" size="mini" type="primary" color="linear-gradient(to right,#329D9c ,#205072 )">
+      发布
+    </van-button>
+  </van-field>
+</van-cell-group>
+
+
+

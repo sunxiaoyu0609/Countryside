@@ -1,0 +1,43 @@
+<van-tabs active="{{ active }}" bind:change="onChange" color="#0E9489">
+  <van-tab title="未开始" custom-class="tab">
+    <navigator class="record" wx:for="{{records}}" url="../Inslookapplicants/Inslookapplicants?A_id={{item._id}}">
+        <image class="record_image" src="{{item.Aimage}}" mode="widthFix"/>
+        <view class="record_name">
+          <van-icon name="smile-o" color="white"/>
+          {{item.Aname}}
+        </view>
+        <view class="record_status1">未开始</view>
+    </navigator>
+
+    <van-empty image="error" description="空空如也" style="display:{{isdiplay}};"/>
+  </van-tab>
+
+
+
+
+  <van-tab title="正在进行">
+    <navigator class="record" wx:for="{{records}}" url="../Inslookapplicants/Inslookapplicants?A_id={{item._id}}">
+        <image class="record_image" src="{{item.Aimage}}" mode="widthFix"/>
+        <view class="record_name">
+          <van-icon name="smile-o" color="white"/>
+          {{item.Aname}}
+        </view>
+        <view class="record_status2">进行中</view>
+    </navigator>
+    <van-empty image="error" description="空空如也" style="display:{{isdiplay}};"/>
+  </van-tab>
+
+
+  <van-tab title="已结束">
+    <navigator class="record" wx:for="{{records}}" url="../InsHairintegral/InsHairintegral?A_id={{item._id}}" >
+        <image class="record_image" src="{{item.Aimage}}" mode="widthFix"/>
+        <view class="record_name">
+          <van-icon name="smile-o" color="white"/>
+          {{item.Aname}}
+        </view>
+        <view class="record_status3">已结束</view>
+    </navigator>
+    <van-empty image="error" description="空空如也" style="display:{{isdiplay}};"/>
+  </van-tab>
+</van-tabs>
+<tabbar active="{{1}}"></tabbar>

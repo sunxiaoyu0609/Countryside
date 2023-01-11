@@ -1,0 +1,18 @@
+<view class="all">
+  <image class="Aimage" src="{{actReqDetail.Aimage==null?'../images/meiyoutu.png':actReqDetail.Aimage}}"/>
+  <van-cell-group>
+    <van-cell title="活动名称" value="{{actReqDetail.Aname}}" />
+    <van-cell title="开始时间" value="{{actReqDetail.AStartTime}}" />
+    <van-cell title="结束时间" value="{{actReqDetail.AEndTime}}" />
+    <van-cell title="负责机构" value="{{actReqDetail.IName}}" />
+    <van-cell title="举办地点" value="{{actReqDetail.APlace}}" />
+    <van-cell title="集合时间" value="{{actReqDetail.Atime}}" />
+    <van-cell title="集合地点" value="{{actReqDetail.Aarea}}" />
+    <van-cell title="征集人数" value="{{actReqDetail.Anumber}}" />
+    <van-cell title="活动说明" value="{{actReqDetail.Aexplain}}" />
+    <van-cell title="活动状态" 
+      value="{{actReqDetail.Aend==0?'未开始':actReqDetail.Aend==1?'进行中':'已结束'}}" />
+  </van-cell-group> 
+    
+
+</view>

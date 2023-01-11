@@ -1,0 +1,87 @@
+<van-cell-group class="group">
+        <van-field
+          required
+          clearable
+          label="机构账号"
+          placeholder="6-20位,由字母开头,数字下划线组成"
+          bind:change="ChangeIaccount"
+          error-message="{{Iaccounterror}}"
+        />
+        <van-field
+        clearable
+          label="密码"
+          placeholder="8到16位,必须含大小写字母和数字"
+          required
+          bind:change="ChangeIpassword"
+          type="password"
+          error-message="{{Ipassworderror}}"
+        />
+        <van-field
+          required
+          clearable
+          label="确认密码"
+          placeholder="请再次输入密码"
+          type="password"
+          bind:change="ChangeIpasswordagain"
+          error-message="{{Ipasswordagainerror}}"
+        />
+        <van-field
+          required
+          clearable
+          label="团体名称"
+          placeholder="请输入志愿者团体名称"
+          bind:change="ChangeIName"
+        />
+        <van-field
+          required
+          clearable
+          label="机构负责人"
+          placeholder="请输入机构负责人名字"
+          bind:change="ChangeIholder"
+        />
+        <van-field
+          required
+          clearable
+          label="联系方式"
+          placeholder="请输入负责人手机号"
+          bind:change="ChangeItel"
+          error-message="{{Itelerror}}"
+        />
+        <van-field
+          required
+          clearable
+          label="简介"
+          placeholder="请输入志愿者团体介绍"
+          bind:change="ChangeIItroduce"
+        />
+        <view class="radios">
+          <view class="clssify"><van-icon name="award" color="#0E9489" />选择主要服务类别</view>
+          <van-radio-group value="{{ radio }}" bind:change="onChange" direction="horizontal" >
+          <van-radio name="1" class="radio" checked-color="#0E9489">便民利民类</van-radio>
+          <van-radio name="2" class="radio" checked-color="#0E9489">扶贫帮困类</van-radio>
+          <van-radio name="3" class="radio" checked-color="#0E9489">就业指导类</van-radio>
+          <van-radio name="4" class="radio" checked-color="#0E9489">治安维稳类</van-radio>
+          <van-radio name="5" class="radio" checked-color="#0E9489">卫生保健类</van-radio>
+          <van-radio name="6" class="radio" checked-color="#0E9489">环境维护类</van-radio>
+          <van-radio name="7" class="radio" checked-color="#0E9489">宣传教育类</van-radio>
+          <van-radio name="8" class="radio" checked-color="#0E9489">文体娱乐类</van-radio>
+          <van-radio name="9" class="radio" checked-color="#0E9489">助农增收类</van-radio>
+          <van-radio name="10" class="radio" checked-color="#0E9489">心理咨询类</van-radio>
+        </van-radio-group>
+        </view>
+      
+        <van-field
+            required
+            value="请上传机构徽标"
+            label=""
+            left-icon="contact"
+            disabled
+            border="{{ false }}"
+            error-message="{{v_imageerror}}"
+        />
+        <van-image width="100" height="100" src="{{images}}" />
+        <van-button type="default" bind:click="upImg" color="#0E9489" class="upImg">上传</van-button>
+        <van-button color="linear-gradient(to right,#329D9c ,#205072 )" size="large"  bind:click="submit" class="bottom">
+         提交
+        </van-button>
+      </van-cell-group>

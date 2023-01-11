@@ -1,0 +1,36 @@
+<view class="top">
+  <image  src="https://img.yzcdn.cn/vant/cat.jpeg" class="share_image" mode="widthFix"></image>
+  <image src="{{avatarUrl}}" class="user"></image>
+  <view class="share_name">{{wxname}}</view>
+</view>
+<!-- 分享 -->
+<van-tabs active="{{ active }}" bind:change="onChange" class="comment" color="#0E9489" wx:for="{{share}}">
+    <view class="discuss">
+      <view class="volunteer" >
+        <van-image
+            round
+            width="30px"
+            height="30px"
+            src="{{item.avatarUrl}}"
+            class="image"
+            fit="cover"
+        />
+        <view class="text">
+          <view class="vname">{{item.nickName}}</view>
+          <view class="content">{{item.sharecontent}}</view>
+          <view class="photos" >
+              <view class="photo"  wx:for="{{item.images}}" wx:for-item="items" >
+                <image src="{{items}}" class="photodetail" ></image>
+              </view> 
+          </view>
+          <view class="text_bottom">
+            <view class="time">{{item._createTime}}</view>
+            <view class="activity">来自活动：{{item.Aname}}</view>
+          </view>
+        </view>    
+      </view>
+    </view>
+</van-tabs>
+
+
+

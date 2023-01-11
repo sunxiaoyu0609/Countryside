@@ -1,0 +1,28 @@
+<view>
+  <view class="head">
+    <view class="headimgpos">
+     <image src="{{volunteer.v_image==null?'../images/meiyoutu.png':volunteer.v_image}}"></image>
+    </view>
+  </view> 
+  <van-cell-group>
+      <van-cell title="姓名" value="{{volunteer.VName}}" />
+      <van-cell title="微信名" value="{{volunteer.wxname}}" />
+      <van-cell title="身份证" value="{{volunteer.v_idcard}}" />
+      <van-cell title="联系方式" value="{{volunteer.VTelephone}}" />
+      <van-cell title="住址" value="{{volunteer.Vaddress}}" />
+      <van-cell title="简介" value="{{volunteer.VIntroduce}}" />
+      <van-radio-group value="{{ radio }}" bind:change="onChange">
+      <van-cell-group title="审批意见">
+        <view class="result">
+          <van-cell class="result_1" title="同意" clickable data-name="2" bind:click="onClick">
+            <van-radio slot="right-icon" name="2" />
+          </van-cell>
+          <van-cell class="result_2" title="驳回" clickable data-name="0" bind:click="onClick">
+            <van-radio slot="right-icon" name="0" />
+          </van-cell>
+        </view>
+      </van-cell-group>
+    </van-radio-group>
+    <van-button type="primary" block data-id="{{volunteer._id}}" bind:click="submit">提交</van-button>
+  </van-cell-group>
+</view>

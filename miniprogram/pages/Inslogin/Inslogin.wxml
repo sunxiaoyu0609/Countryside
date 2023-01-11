@@ -1,0 +1,43 @@
+<view class="main">
+  <view class="login">
+    <view class="kuang shadow">
+        <!-- <view class="hint">机构登录</view> -->
+        <image
+          class="image"
+          src="../images/logo.png"
+        />
+        <van-cell-group class="group">              
+            <van-field
+              value="{{ username }}"
+              clearable
+              label="机构账号"
+              placeholder="请输入账号"
+              bind:change="inputnum"
+            />
+            <van-field
+              value="{{ password }}"
+              type="password"
+              label="密码"
+              placeholder="请输入密码"
+              type="password"
+              border="{{ false }}"
+              bind:change="inputpwd"
+            />  
+        </van-cell-group> 
+        <button class="btn" bindtap="load">登录</button>
+        <button class="btn" bindtap="load2">返回</button>
+        <view class="bottom2">
+          <view class="loginbyin" bindtap="onClick" >忘记密码？</view>
+          <van-share-sheet
+            show="{{ showShare }}"
+            title="请附相关证明发至管理员邮箱:1312788652@qq.com"
+            options="{{ options }}"
+            bind:select="onSelect"
+            bind:close="onClose"
+          />
+
+          <navigator  class="loginbyin2" url="../Insregister/Insregister">注册</navigator>
+        </view>   
+    </view>
+  </view>
+</view>

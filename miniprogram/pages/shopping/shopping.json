@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "van-tab": "../../miniprogram_npm/@vant/weapp/tab/index",
+    "van-tabs": "../../miniprogram_npm/@vant/weapp/tabs/index",
+    "van-swipe-cell": "../../miniprogram_npm/@vant/weapp/swipe-cell/index",
+    "van-card": "../../miniprogram_npm/@vant/weapp/card/index",
+    "van-button": "../../miniprogram_npm/@vant/weapp/button/index",
+    "van-dialog": "../../miniprogram_npm/@vant/weapp/dialog/index",
+    "tabbar" : "../../components/tabbar/tabbar",
+    "van-steps": "../../miniprogram_npm/@vant/weapp/steps/index",
+    "van-image": "../../miniprogram_npm/@vant/weapp/image/index"
+  }
+  
+}

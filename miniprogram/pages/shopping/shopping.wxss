@@ -1,0 +1,44 @@
+/* 我的订单 */
+.order{
+  border:1px solid gainsboro;
+}
+.order_top{
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 90%;
+  height:100px ;
+  background: #a3e2de;
+  /* opacity: 1; */
+  /* background-color: rgba(255, 255, 255, 0.23); */
+  border-radius: 30px;
+  margin-top: 20px;
+  padding-left: 10px;
+}
+.order_image{
+  margin-top: 10px;
+}
+.order_text{
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 12px;
+  flex:5
+}
+.order_GName{
+  margin-top: 5px;
+  flex: 1;
+  font-weight: bolder;
+  font-size: 17px;
+}
+.order_GStatus{
+  margin-top: 7px;
+  flex: 1;
+}
+.order_button{
+  margin-top: 10px;
+  margin-left: 120px;
+  flex: 2;
+}
+

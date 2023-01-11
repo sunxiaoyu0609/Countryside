@@ -1,0 +1,43 @@
+<view class="top">
+  <van-button  size="mini" class="back" bind:click="back">返回</van-button>
+  <van-button type="primary" size="mini" class="upload" round bind:click="upload">发表</van-button>
+</view>
+<view class="input">
+  <van-cell-group>
+    <van-field
+      value="{{ value }}"
+      placeholder="这一刻的想法"
+      border="{{ false }}"
+      bind:change="onChange2"
+      type="textarea"
+      autosize
+      clearable
+    />
+  </van-cell-group>
+  <!-- 选择图片 -->
+  <view class='up-pic'>
+          <view class='flex pic-box'>
+            <block wx:key="imgbox" wx:for="{{imgbox}}">
+              <view class='ap-box'>
+                <view class='add-pic'>
+                  <image class='add-pic' src='{{item}}'></image>
+                  <view class='img-de' data-deindex='{{index}}' bindtap='imgDelete1'>
+                    <van-icon name="clear" />
+                  </view>
+                </view>
+              </view>
+            </block>
+            <image src="../images/photo.png" class='add-pic' bindtap='addPic1' wx:if="{{imgbox.length<9}}">
+            </image>
+          </view>
+  </view>
+</view>
+
+<view class="choose">
+  <view class="activity"><van-icon  color="#0E9489" name="bars" />关联已报名的活动</view>
+  <van-radio-group  value="{{ radio }}" bind:change="onChange" wx:for="{{records}}">
+    <van-radio name="{{index}}" custom-class="radio" checked-color="#0E9489">{{item}}</van-radio>
+  </van-radio-group>
+</view>
+
+

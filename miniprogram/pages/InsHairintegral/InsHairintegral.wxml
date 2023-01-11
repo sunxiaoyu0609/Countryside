@@ -1,0 +1,56 @@
+<van-tabs active="a" color="#0E9489">
+  <van-tab title="发积分" name="a">
+    <view class="discuss" wx:for="{{Volunteers}}">
+    <van-card
+      title="{{item.VName}}"
+      thumb="{{ item.avatarUrl}}"
+    >
+    <view slot="footer">
+      <van-button size="mini" bind:click="submit1" data-id="{{item._id}}">发放</van-button>
+    </view>
+    <view slot="tags">
+      <van-tag type="success" plain color="#0E9489">积分：{{item.VIntegral}}</van-tag>
+      <van-tag type="success" plain color="#0E9489">评分：{{item.Vevaluate}}</van-tag>
+    </view>
+    <view slot="bottom">
+      <van-cell-group>
+          <van-field
+            placeholder="请输入要给的积分，1-20"
+            border="{{ false }}"
+            bind:change="onChange1"
+          />
+        </van-cell-group>
+    </view>
+  </van-card>
+    </view>
+  
+  </van-tab>
+
+
+
+  <van-tab title="评分" name="b">
+    <view class="discuss" wx:for="{{Volunteers}}">
+    <van-card
+      title="{{item.VName}}"
+      thumb="{{ item.avatarUrl}}"
+    >
+    <view slot="footer">
+      <van-button size="mini" bind:click="submit2" data-id="{{item._id}}">评分</van-button>
+    </view>
+    <view slot="tags">
+      <van-tag type="success" plain color="#0E9489">积分：{{item.VIntegral}}</van-tag>
+      <van-tag type="success" plain color="#0E9489">评分：{{item.Vevaluate}}</van-tag>
+    </view>
+    <view slot="bottom">
+      <van-cell-group>
+          <van-field
+            placeholder="请输入要给的评分，1-10"
+            border="{{ false }}"
+            bind:change="onChange2"
+          />
+        </van-cell-group>
+    </view>
+  </van-card>
+    </view>
+  </van-tab>
+</van-tabs>

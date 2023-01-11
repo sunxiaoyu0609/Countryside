@@ -1,0 +1,29 @@
+<van-tabs active="{{ active }}" bind:change="onChange" color="#0E9489">
+  <van-tab title="积分商城">
+    <view wx:for="{{goods}}">
+      <van-card
+        desc="库存:{{item.GStock}}"
+        price="{{item.GPrice}}"
+        title="{{item.GName}}"
+        thumb="{{item.GImage}}"
+      >
+      <view slot="footer">
+        <van-button round type="info" size="mini" bind:click="change" data-id="{{item._id}}">兑换</van-button>
+      </view>  
+  </van-card>
+</view>
+
+  </van-tab>
+  <van-tab title="我的订单">
+    <view class="order" wx:for="{{deliver}}">
+      <view class="order_top">
+        <van-image class="order_image" width="80" height="80" src="{{item.GImage}}"  round  fit="cover" />
+        <view class="order_text">
+          <view class="order_GName">{{item.GName}}</view>
+          <van-button type="default" size="mini" class="order_button" bind:click="confirm" wx:if="{{item.Gstatus!=2}}" data-id="{{item._id}}">确认收货</van-button>
+        </view>  
+      </view>
+      <van-steps steps="{{ steps }}" active="{{item.Gstatus }}"  class="order_steps"/>
+    </view>
+  </van-tab>
+</van-tabs>

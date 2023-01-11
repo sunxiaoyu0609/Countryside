@@ -1,0 +1,129 @@
+Page {
+  font-size: 14px;
+}
+
+.top {
+  width: 100%;
+  height: 180px;
+  background: #0E9489;
+  padding-top: 15px;
+  position: relative;
+}
+
+.center {
+  width: 95%;
+  height: 150px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.center_top {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 80px;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+.center_img {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.center_img image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.center_img .user_head {
+  width: 100%;
+  height: 100%;
+}
+
+.center_info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rpx;
+  margin-left: 30px;
+}
+
+.center_name {
+  font-size: 20px;
+}
+.clickload{
+  font-size: 20px;
+  line-height: 55px;
+}
+
+.center_down {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 35px;
+  margin: 0 auto;
+  margin-top: 20rpx;
+}
+
+.center_rank,.center_score{
+  width: 50%;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.rank_score{
+  color: #AAAAAA; 
+}
+.rank_text {
+  color: #AAAAAA;
+}
+
+.center_rank image {
+  width: 35px;
+  height: 35px;
+}
+
+.center_score image {
+  width: 35px;
+  height: 35px;
+}
+
+.gif-wave {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  mix-blend-mode: screen;
+  height: 100rpx;
+}
+
+
+.bottom{  
+  width: 95%;
+  height: auto;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 5rpx 5rpx 5rpx 5rpx #0E9489;
+  margin-top: 20px;
+}
+.b_panel{
+  height: 50px;
+  font-size: 15px;
+  color: black;
+  margin-top: 3px;
+  border-bottom: 1px solid gainsboro;
+  line-height: 50px;
+  padding-left: 8px;
+}

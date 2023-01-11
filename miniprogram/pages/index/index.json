@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-grid": "../../miniprogram_npm/@vant/weapp/grid/index",
+    "van-grid-item": "../../miniprogram_npm/@vant/weapp/grid-item/index",
+    "van-notice-bar": "../../miniprogram_npm/@vant/weapp/notice-bar/index",
+    "van-card": "../../miniprogram_npm/@vant/weapp/card/index",
+    "van-tabbar": "../../miniprogram_npm/@vant/weapp/tabbar/index",
+    "van-tabbar-item": "../../miniprogram_npm/@vant/weapp/tabbar-item/index",
+    "tabbar" : "../../components/tabbar/tabbar"
+  }
+  
+}

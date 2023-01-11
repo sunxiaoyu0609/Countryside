@@ -1,0 +1,1 @@
+"E:\微信web开发者工具\cli.bat" cloud functions deploy --e sxy-tk2sr --n quickstartFunctions --r --project "E:\微信小程序项目\Countryside" --report_first --report

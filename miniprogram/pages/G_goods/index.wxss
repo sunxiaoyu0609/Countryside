@@ -1,0 +1,20 @@
+/* pages/G_goods/index.wxss */
+
+.goodsform{
+  width: 90%;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 20rpx;
+  background: #14b4a7;
+  
+}
+
+.showimg{
+  width: 10rem;
+  height: 10rem;
+  margin-bottom: 10rpx;
+}
+
+.btn{
+  margin-top: 10px;
+}

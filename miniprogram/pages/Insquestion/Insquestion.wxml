@@ -1,0 +1,28 @@
+<view class="main">
+  <view class="discuss" wx:for="{{discuss}}">
+    <van-card
+      desc="问题:{{item.problem}}"
+      title="时间:{{item.rtime}}"
+      thumb="{{ item.avatarUrl}}"
+    >
+    <view slot="footer">
+      <van-button size="mini" bind:click="submit" data-id="{{item._id}}">回复</van-button>
+    </view>
+    <view slot="tags">
+      <van-tag type="primary">{{item.Aname}}</van-tag>
+      <van-tag type="success">{{item.VName}}</van-tag>
+    </view>
+    <view slot="bottom">
+      <van-cell-group>
+          <van-field
+            placeholder="请输入回复"
+            border="{{ false }}"
+            bind:change="onChange"
+          />
+        </van-cell-group>
+    </view>
+  </van-card>
+  </view>
+</view>
+<van-empty image="error" description="空空如也" style="display:{{isdiplay}};"/>
+<tabbar active="{{2}}"></tabbar>

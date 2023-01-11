@@ -1,0 +1,34 @@
+<van-tabs active="{{ active }}" bind:change="onChange" swipeable color="#0E9489" >
+  <van-tab title="随手拍">
+      <van-field
+            right-icon="question"    
+            value="{{ message }}"
+            label="问题"
+            type="textarea"
+            placeholder="反映遇到的问题"
+            autosize
+            border="{{ false }}"
+            bindinput="getquestion"
+      />
+      <van-image width="100" height="100" src="{{images}}" class="image"/>
+      <van-button type="default" bind:click="upImg" color="#0E9489" class="button">上传图片</van-button>
+      <van-button color="linear-gradient(to right,#329D9c ,#205072 )" size="large"  bind:click="submit"   class="bottom">
+          提交
+      </van-button>
+  </van-tab>
+
+  <van-tab title="已反馈的消息" info="{{show}}">
+  <view wx:for="{{Handclap}}" >
+    <van-card
+      class="van-card"
+      desc="{{item.feedback }}"
+      title="{{ item.problem }}"
+      thumb="{{ item.picture }}"
+    >
+    <view slot="footer">
+      <van-button size="mini" type="warning" bind:click="Read" data-id="{{item._id}}" >确认已读</van-button>
+    </view>
+  </van-card>
+  </view>
+  </van-tab>
+</van-tabs>

@@ -1,0 +1,7 @@
+<image class="image" src="../images/daan.png" mode="widthFix"></image>
+<van-collapse value="{{ activeNames }}" bind:change="onChange" wx:for="{{questions}}">
+  <van-collapse-item title="{{index+1}}.{{item.attention}}" name="{{index}}">
+    {{item.answer}}
+  </van-collapse-item>
+</van-collapse>
+

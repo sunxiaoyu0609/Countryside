@@ -1,0 +1,21 @@
+<van-search
+  placeholder="请输入要查找的机构"
+  bind:search="onSearch"
+  background="#0E9489"
+/>
+<view class="institution" wx:for="{{Institution}}">
+  <van-card
+    desc="简介:{{item.IItroduce}}"
+    title="{{item.IName}}"
+    thumb="{{ item.IImage}}"
+    tags="1111"
+  >
+    <view slot="tag" class="institution_tag">
+          {{item.IClassification}}
+    </view>
+    <view slot="footer" >
+        <text class="institution_text">联系方式：{{item.Itel}}</text>
+    </view>
+  </van-card>
+</view>
+<van-empty description="空空如也" style="display: {{isdiplay}};"/>

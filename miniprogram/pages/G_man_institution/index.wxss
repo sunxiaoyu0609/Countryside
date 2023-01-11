@@ -1,0 +1,10 @@
+/* pages/G_man_institution/index.wxss */
+.contentDtail{
+  display: flex;
+  flex-direction: column;
+}
+.img{
+  width: 70%;
+  height: 150px;
+  margin: 0 auto;
+}

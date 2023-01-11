@@ -1,0 +1,51 @@
+<view  class="imgs">
+  <view wx:for="{{images}}" class="images">
+    <van-grid column-num="3">
+      <van-grid-item text="原图" custom-class="griditem"/>
+      <van-grid-item text="点击中间换图" custom-class="griditem"/>
+      <van-grid-item text="现图" custom-class="griditem"/>
+      <van-grid-item use-slot>
+        <image src="{{item.RImage}}" class="imageitem"/>
+      </van-grid-item>
+      <van-grid-item use-slot>
+        <van-uploader
+            max-count="1"
+            bind:after-read="upImg"
+            deletable="{{ true }}"
+            data-index="{{index}}"/>
+      </van-grid-item>
+      <van-grid-item use-slot>
+        <!-- <van-image custom-class="imageitem" src="{{upImg1}}" /> -->
+        <van-image custom-class="imageitem" src="{{upImg1}}" style="display: {{index==0?'block':'none'}};"/>
+        <van-image custom-class="imageitem" src="{{upImg2}}" style="display: {{index==1?'block':'none'}};"/>
+        <van-image custom-class="imageitem" src="{{upImg3}}" style="display: {{index==2?'block':'none'}};"/>
+        <van-image custom-class="imageitem" src="{{upImg4}}" style="display: {{index==3?'block':'none'}};"/>
+        <van-image custom-class="imageitem" src="{{upImg5}}" style="display: {{index==4?'block':'none'}};"/>
+
+      </van-grid-item>        
+    </van-grid>
+    <van-button plain hairline color="#0E9489" class="imgbtn" bind:click="modifyimg" data-index="{{index}}" data-id="{{item._id}}">
+        更换图片
+    </van-button>
+
+  </view>
+</view>
+
+<!-- <view class="{{ishide==0?'show':'hide'}}">
+<view wx:for="{{imagelist}}">
+  <van-image width="100" height="100" src="{{item}}" />
+</view>
+  
+
+  <view  class="imgs">
+        <van-uploader
+          file-list="{{ fileList }}"
+          max-count="5"
+          bind:after-read="afterRead"
+          class="mimg"
+          deletable="{{ true }}"
+        />
+        <van-image width="100" height="100" src="{{imagelist}}" />
+       
+  </view> -->
+<!-- </view> -->

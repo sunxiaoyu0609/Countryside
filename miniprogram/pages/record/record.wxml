@@ -1,0 +1,11 @@
+<view class="record" wx:for="{{records}}">
+  <image class="record_image" src="{{item.Aimage}}" mode="widthFix"/>
+  <view class="record_name">
+    <van-icon name="smile-o" color="white"/>
+    {{item.Aname}}
+  </view>
+  <view wx:if="{{item.Aend==0}}" class="record_status1">未开始</view>
+  <view wx:if="{{item.Aend==1}}" class="record_status2">进行中</view>
+  <view wx:if="{{item.Aend==2}}" class="record_status3">已结束</view>
+</view>
+<van-empty image="error" description="空空如也" style="display:{{isdiplay}};"/>

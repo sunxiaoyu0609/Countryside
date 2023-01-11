@@ -1,0 +1,12 @@
+<view wx:for="{{news}}">
+  <van-card
+    desc="{{item.title}}"
+    title="{{item.content}}"
+    thumb="{{item.image}}"
+  />
+</view>
+
+
+
+
+

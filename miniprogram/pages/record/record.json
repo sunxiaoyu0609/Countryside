@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-icon": "../../miniprogram_npm/@vant/weapp/icon/index",
+    "van-empty": "../../miniprogram_npm/@vant/weapp/empty/index"
+  },
+  "enablePullDownRefresh": true
+}

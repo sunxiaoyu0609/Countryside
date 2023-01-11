@@ -1,0 +1,65 @@
+<!-- 通过tab选择管理机构还是志愿者 -->
+<van-tabs animated color="#0E9489">
+  <van-tab title="机构">
+    <view class="buju">
+      <view class="search">
+        <van-search
+          input-align="center"
+          placeholder="请输入搜索关键词"
+          custom-class="seaedit"
+          class="seaedit"
+          bind:change="search"
+          data-tag="1"
+        />
+      </view>
+      <view class="block" wx:for="{{instition}}" bindtap="goInsitiDetail"
+          data-ins-id="{{item.Iaccount}}">
+        <image src="{{item.IImage==null?'../images/meiyoutu.png':item.IImage}}" class="itemimg"/>
+        <view class="text">
+          <view class="IName" >{{item.IName}}</view>
+          <view class="sort">{{item.IClassification}}</view>
+          <view class="holder">
+            <view>联系人：</view> <view>{{item.Iholder}}</view> 
+          </view>
+      </view>
+      </view>
+    </view>
+  </van-tab>
+
+  <van-tab title="志愿者">
+    <view class="buju">
+      <view class="search">
+          <van-search
+            input-align="center"
+            placeholder="请输入搜索关键词"
+            custom-class="seaedit"
+            class="seaedit"
+            bind:change="search"
+          />
+        </view>
+        <view class="block" wx:for="{{volunteer}}" bindtap="goVoliDetail"
+        data-id="{{item._id}}">
+          <image src="{{item.v_image==null?'../images/meiyoutu.png':item.v_image}}" class="itemimg"/>
+          <view class="text">
+            <view class="IName" >{{item.VName}}</view>
+            <view class="points">
+              <view>积分：</view>
+              <view>{{item.VIntegral}}</view>
+            </view>
+            <view class="points">
+              <view >评级：</view>
+              <view>{{item.Vevaluate}}</view>
+            </view>
+          </view>
+        </view>
+        
+    </view>
+  </van-tab>
+</van-tabs>
+<view class="heimingdan" bindtap="goHeiMingDan">
+  <image src="../images/heimingdan.png"/>
+</view>
+    
+
+<!-- 底部tab --> 
+<tabbottom   activeindex="3"></tabbottom>

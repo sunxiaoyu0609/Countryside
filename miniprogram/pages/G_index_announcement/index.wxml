@@ -1,0 +1,14 @@
+
+<van-cell-group>
+  <van-cell title="当前公告"  label="{{announce.NContent}}" border="{{ false }}" />
+</van-cell-group>
+<van-cell-group>
+  <van-cell title="更改公告"  />
+  <van-field
+    value="{{newAnnounce}}"
+    bind:blur="getNewAnnounce"
+    placeholder="请输入内容"
+    border="{{ true }}"
+  />
+  <van-button type="primary" block bind:click="modifyAnnounce">提交</van-button>
+</van-cell-group>

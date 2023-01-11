@@ -1,0 +1,57 @@
+.record{
+  width: 90%;
+  margin: 0 auto;
+  height: auto;
+  margin-top: 10px;
+  position: relative;
+
+}
+.record_image{
+  border-radius: 20px;
+  width: 100%;
+}
+.record_name{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #0E9489;
+  width: auto;
+  color: white;
+  padding:10px;
+  padding-right: 15px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.record_status1{
+  padding: 10px;
+  padding-left: 20px;
+  color: white;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-bottom-right-radius: 20px;
+  background:linear-gradient(to right, rgba(12, 216, 165, 0.3) , rgba(12, 216, 165))
+}
+.record_status2{
+  padding: 10px;
+  padding-left: 20px;
+  color: white;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-bottom-right-radius: 20px;
+  background:linear-gradient(to right,rgba(0, 195, 255, 0.26), rgba(0, 195, 255))
+}
+.record_status3{
+  padding: 10px;
+  padding-left: 20px;
+  color: white;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-bottom-right-radius: 20px;
+  background:linear-gradient(to right,rgba(39, 39, 39, 0.3) ,rgba(39, 39, 39) )
+}
+.tab{
+  padding-bottom: 150px;
+}

@@ -1,0 +1,66 @@
+<!-- 通过tab选择管理机构还是志愿者 -->
+<van-tabs animated color="#0E9489">
+  <van-tab title="机构">
+    <view class="buju">
+      <view class="search">
+        <van-search
+          input-align="center"
+          placeholder="请输入搜索关键词"
+          custom-class="seaedit"
+          class="seaedit"
+          bind:change="search"
+          data-tag="1"
+        />
+      </view>
+      <view class="block" wx:for="{{instition}}">
+        <image src="{{item.IImage==null?'../images/meiyoutu.png':item.IImage}}"
+            bindtap="goInsitiDetail" data-ins-id="{{item.Iaccount}}" class="itemimg"/>
+        <view class="text" bindtap="goInsitiDetail" data-ins-id="{{item.Iaccount}}">
+          <view class="IName" >{{item.IName}}</view>
+          <view class="sort">{{item.IClassification}}</view>
+          <view class="holder">
+            <view>联系人：</view> <view>{{item.Iholder}}</view> 
+          </view>
+        </view>
+        <view class="btn">
+          <van-button round type="primary" size="small" class="subbtn"
+            data-id="{{item._id}}" bind:click="recover">恢复认证</van-button>
+        </view> 
+      </view>
+    </view>
+  </van-tab>
+  
+  <van-dialog id="van-dialog" />
+
+  <van-tab title="志愿者">
+    <view class="buju">
+      <view class="search">
+          <van-search
+            input-align="center"
+            placeholder="请输入搜索关键词"
+            custom-class="seaedit"
+            class="seaedit"
+            bind:change="search"
+          />
+      </view>
+      <view class="block" wx:for="{{volunteer}}">
+        <image src="{{item.v_image==null?'../images/meiyoutu.png':item.v_image}}"
+            bindtap="goVoliDetail" data-id="{{item._id}}" class="itemimg"/>
+        <view class="text"  bindtap="goVoliDetail" data-id="{{item._id}}">
+          <view class="IName" >{{item.VName}}</view>
+          <view class="points">
+            <view>积分：</view>  <view>{{item.VIntegral}}</view>
+          </view>
+          <view class="points">
+            <view >评级：</view>  <view>{{item.Vevaluate}}</view>
+          </view>
+        </view>
+        <view class="btn">
+          <van-button round type="primary" size="small" class="subbtn"
+            data-id="{{item._id}}" bind:click="cancel">取消封锁</van-button>
+        </view> 
+      </view>
+        
+    </view>
+  </van-tab>
+</van-tabs>

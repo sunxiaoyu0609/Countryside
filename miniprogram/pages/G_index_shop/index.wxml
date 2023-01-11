@@ -1,0 +1,38 @@
+<view>
+  <view class="search">
+    <van-search
+      input-align="center"
+      placeholder="请输入搜索关键词"
+      custom-class="seaedit"
+      class="seaedit"
+      bind:change="search"
+    />
+    <!-- <van-button round type="primary" custom-class="seabtn" class="seabtn" bind:click="search">搜索</van-button> -->
+  </view>
+  <van-button type="info" block class="plusBtn" bind:click="add">增添商品</van-button>
+  <view wx:for="{{goods}}" class="goods">
+    <van-swipe-cell right-width="{{ 65 }}" >
+      <van-card
+        num="{{item.GStock}}"
+        price="{{item.GPrice}}"
+        title="{{item.GName}}"
+        thumb="{{item.GImage}}"
+        num-class="numc" 
+        price-class="pricec"
+        title-class="titlec">
+        <view slot="footer">
+          <van-button size="mini" type="primary" bind:click="modify" data-gid="{{item._id}}" 
+          class="modify">修改</van-button>
+          <van-button size="mini" type="danger" class="withdraw" bind:click="withdraw"
+           data-gid="{{item._id}}">下架</van-button>
+        </view>
+      </van-card> 
+    </van-swipe-cell>
+    <van-dialog id="van-dialog" />
+  </view>
+
+
+</view>
+
+
+

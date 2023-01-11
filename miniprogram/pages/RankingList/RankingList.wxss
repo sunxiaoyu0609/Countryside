@@ -1,0 +1,35 @@
+.van_tab {
+  background: -webkit-linear-gradient(bottom, #0E9489 0%, #00CDAC  51%, #00CDAC  100%);
+  padding-bottom: 1000px;
+}
+.Ranking{
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 90%;
+  height:80px ;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.23);
+  border-radius: 30px;
+  margin-top: 10px;
+  align-items:center;/*垂直居中*/
+}
+.Ranking_index{
+  text-align: center;
+  flex:1 ;
+  color: rgb(212, 212, 120);
+}
+.Ranking_image{
+  flex: 4;
+}
+.wxnameandVintegral{
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+}
+.Ranking_name{
+  color: white;
+}
+.Ranking_VIntegral{
+  color: rgb(240, 224, 6);
+}

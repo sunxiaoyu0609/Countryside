@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "tabbottom":"../../components/tabbottom/tabbottom",
+    "van-action-sheet": "../../miniprogram_npm/@vant/weapp/action-sheet/index",
+    "van-icon": "../../miniprogram_npm/@vant/weapp/icon/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-field": "@vant/weapp/field/index"
+  }
+}

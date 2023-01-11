@@ -1,0 +1,31 @@
+<van-tabs swipeable animated color="#0E9489" active="{{ active }}" bind:change="onChange"  class="van_tab">
+  <van-tab title="积分排行榜">
+    <van-transition name="fade-up">
+      <view wx:for="{{usersinfo2}}" wx:for-index="index"  wx:if="{{index<50}}">
+      <view class="Ranking">
+        <text class="Ranking_index">{{index+1}}</text>
+        <van-image width="70" height="70" fit="cover" class="Ranking_image"  round src="{{item.avatarUrl}}" />
+        <view class="wxnameandVintegral">
+          <view class="Ranking_name">{{item.VName}}</view>
+          <view class="Ranking_VIntegral">积分：{{item.VIntegral}}</view>
+        </view> 
+      </view>
+      </view>
+    </van-transition>
+  </van-tab>
+  <van-tab title="评分排行榜">
+    <van-transition name="fade">
+      <view wx:for="{{usersinfo1}}" wx:for-index="index" wx:if="{{index<50}}">
+      <view class="Ranking">
+      <text class="Ranking_index">{{index+1}}</text>
+        <van-image width="70" height="70" fit="cover" class="Ranking_image"  round src="{{item.avatarUrl}}" />
+        <view class="wxnameandVintegral">
+          <view class="Ranking_name">{{item.VName}}</view>
+          <view class="Ranking_VIntegral">评分：{{item.Vevaluate}}</view>
+        </view> 
+      </view>
+      </view>
+    </van-transition>
+    
+  </van-tab>
+</van-tabs>

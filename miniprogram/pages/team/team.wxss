@@ -1,0 +1,13 @@
+.institution_tag{
+  text-align: center;
+  border: 2px solid rgb(241, 81, 81);
+  border-radius: 8px;
+}
+.institution_text{
+  color: #0E9489;
+  font-weight: bolder;
+}
+.institution{
+  border: 1px solid gainsboro;
+  margin-top: 10px;
+}

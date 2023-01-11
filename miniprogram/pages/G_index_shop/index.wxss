@@ -1,0 +1,40 @@
+.search{
+  display: flex;
+  background-color: white;
+}
+.seaedit{
+  flex: 9;
+}
+.seabtn{
+  height: 35rpx;
+  margin-top: 5rpx;
+  margin-left: 5rpx;
+  flex: 2;
+
+}
+
+.goods{
+  border-bottom: 1px solid #ccc;
+}
+.plusBtn{
+  z-index: 20;
+  position: fixed;
+  bottom: 40px;
+}
+
+.numc{
+    margin-bottom: 10px;
+}
+.titlec{
+  margin-top: 15px;
+  margin-left: 10px;
+  font-size: 15px !important; 
+}
+.pricec{
+  margin-left: 10px;
+}
+
+.modify,.withdraw{
+  margin-left: 10px;
+  margin-left: 10px;
+}

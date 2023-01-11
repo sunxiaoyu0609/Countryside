@@ -1,0 +1,37 @@
+<view class="container goodsform">
+
+  <!-- 上传图片 -->
+  <van-uploader file-list="{{ fileList }}" bind:after-read="upImg" 
+    class="img" style="display:{{visable1==1 && visable2==1?'block':'none'}};"/>
+  <image src="{{GImage}}" style="display:{{visable2==0?'block':'none'}};" class="showimg"></image>
+  <van-image
+    width="10rem"
+    height="10rem"
+    fit="contain"
+    src="{{goods.GImage}}"
+    style="display:{{visable1==0?'block':'none'}};"
+  />
+
+  <van-cell-group>
+    <van-field
+      model:value="{{ GName }}"
+      clearable
+      label="商品名"
+      bind:click-icon="onClickIcon"
+    />
+    <van-field
+      model:value="{{ GPrice }}"
+      label="价格"
+      border="{{ false }}"
+    />
+    <van-field
+      model:value="{{ GStock }}"
+      label="库存"
+      border="{{ false }}"
+    />
+  </van-cell-group>
+
+  <van-button type="primary" class="btn" bind:click="{{visable==0?'modify':'add'}}">提交</van-button>
+  <van-dialog id="van-dialog" />
+
+</view>

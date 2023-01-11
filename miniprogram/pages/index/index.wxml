@@ -1,0 +1,95 @@
+<view class="swiperContainer">
+  <swiper class="imageContainer" bindchange="swiperChange" previous-margin="55rpx" next-margin="50rpx" circular autoplay>
+    <block wx:for="{{RImage}}" wx:key="index">
+       <swiper-item class="turnItem">
+          <image class="itemImg {{index == swiperCurrent ? 'imgActive': ''}}" src="{{item.RImage}}"></image>
+        </swiper-item>
+    </block>
+  </swiper>
+   <!-- 指示点的修饰 -->
+  <view class="dots">
+     <block wx:for="{{RImage}}" wx:key="index">
+        <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+      </block>
+  </view>
+</view>
+<!-- 功能宫格 -->
+<van-grid clickable column-num="4">
+  <van-grid-item
+    icon="like"
+    icon-color="#0E9489"
+    link-type="switchTab"
+    url="/pages/vactivity/vactivity"
+    text="志愿报名"
+  />
+  <van-grid-item
+    icon="smile"
+    icon-color="#0E9489"
+    link-type="navigateTo"
+    url="/pages/voluntarystyle/voluntarystyle"
+    text="志愿风采"
+  />
+  <van-grid-item
+    icon="friends"
+    icon-color="#0E9489"
+    link-type="navigateTo"
+    url="/pages/team/team"
+    text="志愿团体"
+  />
+  <van-grid-item
+    icon="label"
+    icon-color="#0E9489"
+    link-type="navigateTo"
+    url="/pages/news/news"
+    text="学知识"
+  />
+
+
+  
+</van-grid>
+<van-grid clickable column-num="4">
+  <van-grid-item
+    icon="photograph"
+    icon-color="#0E9489"
+    link-type="navigateTo"
+    text="随手拍"
+    bindtap="quanxian1"
+  />
+  <van-grid-item
+    icon="hot"
+    icon-color="#0E9489"
+    link-type="navigateTo"
+    text="排行榜"
+    bindtap="quanxian2"
+  />
+  <van-grid-item
+    icon="award"
+    icon-color="#0E9489"
+    link-type="navigateTo"
+    text="心得分享"
+    bindtap="quanxian3"
+  />
+  <van-grid-item
+    icon="more"
+    icon-color="#0E9489"
+    link-type="navigateTo"
+    url="/pages/question/question"
+    text="常见问题"
+  />
+</van-grid>
+
+<!-- 公告栏 -->
+<van-notice-bar
+  left-icon="volume-o"
+  text="{{content}}"
+  background="#0E9489"
+  color="white"
+/>
+<!-- 政府发布的新闻知识，学知识板块的部分内容 -->
+<view wx:for="{{news}}" wx:if="{{index<3}}">
+  <van-card
+    desc="{{item.content}}"
+    title="{{item.title}}"
+    thumb="{{item.image}}"
+  />
+</view>
